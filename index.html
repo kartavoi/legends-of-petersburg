@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мифы и легенды Санкт-Петербурга</title>
+
+    <link rel="icon" type="image/png" href="./images/free-icon-saint-petersburg-1530032.png">
+
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>
+                Мифы и легенды
+                <span>Санкт-Петербурга</span>
+            </h1>
+
+            <p>
+                От алхимиков и призраков императоров
+                до мемов XXI века
+            </p>
+
+            <a href="#about" class="btn">
+                Исследовать
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+        <h2>О проекте</h2>
+
+        <p>
+            Санкт-Петербург — город туманов,
+            дворцов и загадок.
+            Мы собрали самые известные городские легенды,
+            мистические истории и современные интернет-мифы,
+            чтобы показать, как фольклор продолжает жить
+            в цифровую эпоху.
+        </p>
+
+        <div class="stats">
+
+            <div class="card">
+                <h3>6</h3>
+                <span>легенд</span>
+            </div>
+
+            <div class="card">
+                <h3>300+</h3>
+                <span>лет истории</span>
+            </div>
+
+            <div class="card">
+                <h3>1</h3>
+                <span>город</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="timeline">
+
+        <h2>Легенды сквозь века</h2>
+
+        <div class="timeline-container">
+
+            <div class="timeline-item">
+                <div class="year">XVIII век</div>
+                <h3>Проклятие Кикиморы</h3>
+                <p>Одна из древнейших легенд Петербурга.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">XVIII век</div>
+                <h3>Анна Иоанновна</h3>
+                <p>Легенда о призрачном двойнике императрицы.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">XIX век</div>
+                <h3>Башня Грифонов</h3>
+                <p>Алхимия Вильгельма Пеля и тайные знания.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">XX век</div>
+                <h3>Призрак Распутина</h3>
+                <p>Последняя квартира «Святого черта».</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">XXI век</div>
+                <h3>Современные мемы</h3>
+                <p>Новый цифровой фольклор Петербурга.</p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- MAP -->
+
+    <section class="map-section">
+
+        <h2>Интерактивная карта легенд</h2>
+
+        <p class="map-subtitle">
+            На карте отмечены ключевые объекты исследования городских мифов и легенд Санкт-Петербурга.
+        </p>
+
+        <div class="map-container">
+
+            <iframe src="map.html" loading="lazy">
+            </iframe>
+
+        </div>
+
+        <a href="map.html" target="_blank" class="btn map-btn">
+
+            Открыть карту в полном размере
+
+        </a>
+
+    </section>
+
+    <!-- LEGENDS -->
+
+    <section class="legends">
+
+        <h2>Легенды Петербурга</h2>
+
+        <div class="legend-grid">
+
+            <div class="legend-card" onclick="openModal('griffin')">
+                <img src="./images/griffon.jpg" alt="">
+                <h3>Башня Грифонов</h3>
+                <p>Алхимия, тайные коды и мифические стражи.</p>
+            </div>
+
+            <div class="legend-card" onclick="openModal('rotunda')">
+                <img src="./images/rotonda.jpg" alt="">
+                <h3>Ротонда</h3>
+                <p>Портал в ад и тайные ритуалы.</p>
+            </div>
+
+            <div class="legend-card" onclick="openModal('rasputin')">
+                <img src="images/rasputin.jpg" alt="">
+                <h3>Призрак Распутина</h3>
+                <p>Самый знаменитый полтергейст города.</p>
+            </div>
+
+            <div class="legend-card" onclick="openModal('kikimora')">
+                <img src="./images/troitskaja_ploshad`(1).jpg" alt="">
+                <h3>Проклятие Кикиморы</h3>
+                <p>Древнее проклятие Петербурга.</p>
+            </div>
+
+            <div class="legend-card" onclick="openModal('anna')">
+                <img src="./images/letnij-sad.jpg" alt="">
+                <h3>Анна Иоанновна</h3>
+                <p>Призрачный двойник императрицы.</p>
+            </div>
+
+            <div class="legend-card" onclick="openModal('memes')">
+                <img style="object-fit: contain;" src="./images/preview.png" alt="">
+                <h3>Мифы XXI века</h3>
+                <p>Современный интернет-фольклор.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- QUIZ -->
+
+    <section class="quiz">
+
+        <h2>Правда или миф?</h2>
+
+        <div class="quiz-container">
+
+            <h3 id="question">
+                Загрузка вопроса...
+            </h3>
+
+            <div id="answers"></div>
+
+            <button id="nextBtn" onclick="nextQuestion()">
+                Следующий вопрос
+            </button>
+
+            <div id="result"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="modal" id="griffinModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('griffin')">
+                ×
+            </span>
+
+            <img src="./images/griffon.jpg" class="modal-image">
+
+            <h2>Башня Грифонов</h2>
+
+            <p><b>Адрес:</b> Васильевский остров, 2-я линия, 16</p>
+
+            <br>
+
+            <p>
+                Согласно городской легенде,
+                аптекарь Вильгельм Пель занимался
+                алхимией и искал философский камень.
+                В подвалах аптеки он якобы вывел
+                живых грифонов, которые охраняли его секреты.
+            </p>
+
+            <br>
+
+            <p>
+                Таинственная кирпичная башня во дворе
+                считается местом их обитания.
+                Цифры на кирпичах называют шифром Вселенной.
+            </p>
+
+            <br>
+
+            <h3>Интернет-фольклор</h3>
+
+            <ul>
+                <li>«Числа на кирпичах меняются каждую ночь»</li>
+                <li>«Пель вывел грифонов для охраны секретов»</li>
+                <li>«Здесь исполняются желания»</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="rotundaModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('rotunda')">×</span>
+
+            <img src="./images/rotonda.jpg" class="modal-image">
+
+            <h2>Ротонда — Портал в Ад</h2>
+
+            <p><b>Адрес:</b> Гороховая улица, 57</p>
+
+            <br>
+
+            <p>
+                Одна из самых известных мистических локаций Петербурга.
+                Согласно легенде, в полночь здесь появляется Люцифер
+                и предлагает исполнение желаний в обмен на душу.
+            </p>
+
+            <br>
+
+            <p>
+                Местные жители рассказывают о странной акустике,
+                таинственных голосах и исчезновениях людей.
+            </p>
+
+            <br>
+
+            <ul>
+                <li>«Здесь собирались сатанисты»</li>
+                <li>«Желание исполнилось, но цена оказалась высокой»</li>
+                <li>«Голоса слышны даже ночью»</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="modal" id="rasputinModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('rasputin')">×</span>
+
+            <img src="images/rasputin.jpg" class="modal-image">
+
+            <h2>Призрак Григория Распутина</h2>
+
+            <p><b>Адрес:</b> Гороховая улица, 64</p>
+
+            <br>
+
+            <p>
+                Последняя квартира Распутина стала центром
+                городских легенд после его смерти.
+            </p>
+
+            <br>
+
+            <p>
+                Жильцы рассказывали о тяжелых шагах,
+                шорохах и силуэте старика в коридорах.
+            </p>
+
+            <br>
+
+            <ul>
+                <li>«Он никуда не ушёл»</li>
+                <li>«Кто-то стоял за моей спиной»</li>
+                <li>«Распутин помогает жильцам»</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="modal" id="kikimoraModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('kikimora')">×</span>
+
+            <img src="./images/troitskaja_ploshad`(1).jpg" class="modal-image">
+
+            <h2>Проклятие Кикиморы</h2>
+
+            <p><b>Адрес:</b> Троицкая площадь</p>
+
+            <br>
+
+            <p>
+                По легенде, загадочная Кикимора произнесла
+                проклятие «Петербургу быть пусту».
+            </p>
+
+            <br>
+
+            <p>
+                Многие связывают с этим наводнения,
+                революции и другие трагические события.
+            </p>
+
+            <br>
+
+            <ul>
+                <li>«Проклятие сбылось»</li>
+                <li>«Кикимору видят до сих пор»</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="modal" id="annaModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('anna')">×</span>
+
+            <img src="./images/letnij-sad.jpg" class="modal-image">
+
+            <h2>Призрак Анны Иоанновны</h2>
+
+            <p><b>Адрес:</b> Летний сад</p>
+
+            <br>
+
+            <p>
+                Императрица увидела своего двойника
+                за два дня до смерти.
+            </p>
+
+            <br>
+
+            <p>
+                С тех пор её призрак якобы появляется
+                в садах и дворцах города.
+            </p>
+
+            <br>
+
+            <ul>
+                <li>«Предвестник смерти»</li>
+                <li>«Офицер отсалютовал призраку»</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="modal" id="memesModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('memes')">×</span>
+
+            <div class="meme-gallery">
+
+                <div class="meme-item">
+                    <img src="./images/razborka_piterskaja.png">
+                    <span>Разборка питерская</span>
+                </div>
+                <div class="meme-item">
+                    <img src="./images/kotletka.jpg">
+                    <span>Котлетка с пюрешкой</span>
+                </div>
+                <div class="meme-item">
+                    <img src="./images/smile_face.jpg">
+                    <span>Smile face</span>
+                </div>
+
+
+            </div>
+
+            <h2>Современные мифы Петербурга</h2>
+
+            <br>
+
+            <h3>Это разборка питерская</h3>
+
+            <p>
+                Легендарная фраза,
+                ставшая символом городских конфликтов.
+            </p>
+
+            <br>
+
+            <h3>Котлетка с пюрешкой</h3>
+
+            <p>
+                Мем о простой и уютной жизни Петербурга.
+            </p>
+
+            <br>
+
+            <h3>Smile face</h3>
+
+            <p>
+                История про умный домофон,
+                заставивший человека улыбнуться ради входа домой.
+            </p>
+
+        </div>
+    </div>
+
+    <section class="process">
+
+        <h2>Как создавался проект</h2>
+
+        <div class="process-grid">
+
+            <div class="process-card">
+                <div class="step">01</div>
+                <h3>Сбор легенд</h3>
+                <p>
+                    Были изучены городские легенды,
+                    исторические статьи и краеведческие материалы.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step">02</div>
+                <h3>Поиск упоминаний</h3>
+                <p>
+                    Собраны современные обсуждения
+                    из социальных сетей, блогов и форумов.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step">03</div>
+                <h3>Анализ источников</h3>
+                <p>
+                    Сравнены исторические факты
+                    и современные интерпретации легенд.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step">04</div>
+                <h3>Геолокация</h3>
+                <p>
+                    Для каждой легенды были определены
+                    реальные городские координаты.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step">05</div>
+                <h3>Интерактивная карта</h3>
+                <p>
+                    Все объекты нанесены на карту
+                    для удобного исследования.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="step">06</div>
+                <h3>Создание сайта</h3>
+                <p>
+                    Результаты исследования были оформлены
+                    в виде интерактивного веб-проекта.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="team">
+
+        <h2>Команда проекта</h2>
+
+        <p class="team-subtitle">
+            Участники, работавшие над исследованием мифов и легенд Санкт-Петербурга
+        </p>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+                <img src="images/avatar-placeholder.jpg" alt="">
+                <h3>Шульпина Карина</h3>
+                <span>Тимлид</span>
+                <p>
+                    Координация работы команды, распределение задач и контроль реализации проекта.
+                </p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/avatar-placeholder.jpg" alt="">
+                <h3>Власенко Дарья</h3>
+                <span>Python-разработчик</span>
+                <p>
+                    Работа с обработкой данных, картой и технической частью проекта.
+                </p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/avatar-placeholder.jpg" alt="">
+                <h3>Ушкова Юлия</h3>
+                <span>Тильда-верстальщик</span>
+                <p>
+                    Разработка структуры сайта и подготовка материалов для публикации.
+                </p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/avatar-placeholder.jpg" alt="">
+                <h3>Каблова Алина</h3>
+                <span>Парсер данных</span>
+                <p>
+                    Сбор и систематизация информации из открытых источников.
+                </p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/avatar-placeholder.jpg" alt="">
+                <h3>Раудсон Ирина</h3>
+                <span>Парсер данных</span>
+                <p>
+                    Поиск интернет-упоминаний и подготовка данных для исследования.
+                </p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/avatar-placeholder.jpg" alt="">
+                <h3>Чие Виктория</h3>
+                <span>Контент-редактор</span>
+                <p>
+                    Редактирование материалов и подготовка текстов проекта.
+                </p>
+            </div>
+
+            <div class="team-card last-card">
+                <img src="images/avatar-placeholder.jpg" alt="">
+                <h3>Попова Виктория</h3>
+                <span>Тестировщик</span>
+                <p>
+                    Проверка функциональности сайта и контроль качества проекта.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>Мифы и легенды Санкт-Петербурга</h3>
+
+        <p>
+            Учебный проект • 2026
+        </p>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

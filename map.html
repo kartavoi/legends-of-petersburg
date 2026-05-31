@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="icon" type="image/png" href="./images/free-icon-saint-petersburg-1530032.png">
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5500642146b220b9472a3fe96f0596eb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5500642146b220b9472a3fe96f0596eb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5500642146b220b9472a3fe96f0596eb = L.map(
+                "map_5500642146b220b9472a3fe96f0596eb",
+                {
+                    center: [59.939095, 30.315868],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1e7233811531a07238b7c41a19abebed = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1e7233811531a07238b7c41a19abebed.addTo(map_5500642146b220b9472a3fe96f0596eb);
+        
+    
+            var feature_group_2f33f361923c92ad2de5579e6c2189db = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_f7384c754dbd6ca34823fce196d26c10 = L.marker(
+                [59.938182, 30.283633],
+                {
+}
+            ).addTo(feature_group_2f33f361923c92ad2de5579e6c2189db);
+        
+    
+            var icon_31aa9605763820eb3e6c5b09a14071c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f11fcbb1dd7a1cb002414797726c50b7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b45ca6b14924b8e11343f9972027fc60 = $(`<div id="html_b45ca6b14924b8e11343f9972027fc60" style="width: 100.0%; height: 100.0%;">     <div style="width:260px">          <img src="./images/griffon.jpg"              width="100%"              style="              border-radius:12px;              margin-bottom:10px;">          <h3>Башня Грифонов</h3>          <p>Легенда о тайном алхимике Пеле и загадочных грифонах.</p>          <p>         <b>Адрес:</b><br>         2-я линия В.О., 16         </p>      </div>     </div>`)[0];
+                popup_f11fcbb1dd7a1cb002414797726c50b7.setContent(html_b45ca6b14924b8e11343f9972027fc60);
+            
+        
+
+        marker_f7384c754dbd6ca34823fce196d26c10.bindPopup(popup_f11fcbb1dd7a1cb002414797726c50b7)
+        ;
+
+        
+    
+    
+            marker_f7384c754dbd6ca34823fce196d26c10.bindTooltip(
+                `<div>
+                     Башня Грифонов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7384c754dbd6ca34823fce196d26c10.setIcon(icon_31aa9605763820eb3e6c5b09a14071c4);
+            
+    
+            var marker_8fae3f246996f6ad000d12537799e805 = L.marker(
+                [59.925755, 30.325768],
+                {
+}
+            ).addTo(feature_group_2f33f361923c92ad2de5579e6c2189db);
+        
+    
+            var icon_132c07b16afff5c0492b4411b8967a90 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2574f86b6dfd8e14608a8760e145eae2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_994a6c5d51f0cb84823eb4d53fe604ba = $(`<div id="html_994a6c5d51f0cb84823eb4d53fe604ba" style="width: 100.0%; height: 100.0%;">     <div style="width:260px">          <img src="./images/rotonda.jpg"              width="100%"              style="              border-radius:12px;              margin-bottom:10px;">          <h3>Ротонда</h3>          <p>Мистический портал Петербурга и место множества городских легенд.</p>          <p>         <b>Адрес:</b><br>         Гороховая ул., 57         </p>      </div>     </div>`)[0];
+                popup_2574f86b6dfd8e14608a8760e145eae2.setContent(html_994a6c5d51f0cb84823eb4d53fe604ba);
+            
+        
+
+        marker_8fae3f246996f6ad000d12537799e805.bindPopup(popup_2574f86b6dfd8e14608a8760e145eae2)
+        ;
+
+        
+    
+    
+            marker_8fae3f246996f6ad000d12537799e805.bindTooltip(
+                `<div>
+                     Ротонда
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8fae3f246996f6ad000d12537799e805.setIcon(icon_132c07b16afff5c0492b4411b8967a90);
+            
+    
+            var marker_4a2d6f761c22515c21c4f8f9c10a79e5 = L.marker(
+                [59.923276, 30.330856],
+                {
+}
+            ).addTo(feature_group_2f33f361923c92ad2de5579e6c2189db);
+        
+    
+            var icon_3ef3637e9abc41dcedc9addbe461e4b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6f6231d6fb0571cb3a54d01f3232f6b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_58d8867572de6358ca621f1e6f81ea94 = $(`<div id="html_58d8867572de6358ca621f1e6f81ea94" style="width: 100.0%; height: 100.0%;">     <div style="width:260px">          <img src="images/rasputin.jpg"              width="100%"              style="              border-radius:12px;              margin-bottom:10px;">          <h3>Призрак Распутина</h3>          <p>Легенда о духе Григория Распутина, который до сих пор не покидает свой дом.</p>          <p>         <b>Адрес:</b><br>         Гороховая ул., 64         </p>      </div>     </div>`)[0];
+                popup_f6f6231d6fb0571cb3a54d01f3232f6b.setContent(html_58d8867572de6358ca621f1e6f81ea94);
+            
+        
+
+        marker_4a2d6f761c22515c21c4f8f9c10a79e5.bindPopup(popup_f6f6231d6fb0571cb3a54d01f3232f6b)
+        ;
+
+        
+    
+    
+            marker_4a2d6f761c22515c21c4f8f9c10a79e5.bindTooltip(
+                `<div>
+                     Призрак Распутина
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a2d6f761c22515c21c4f8f9c10a79e5.setIcon(icon_3ef3637e9abc41dcedc9addbe461e4b2);
+            
+    
+            var marker_c42ed1336623c1783b66a760adab718e = L.marker(
+                [59.952699, 30.325958],
+                {
+}
+            ).addTo(feature_group_2f33f361923c92ad2de5579e6c2189db);
+        
+    
+            var icon_1350895666dc2e935451d7ea20e860c2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c4e174921e393097deb5e51a691aaea = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_75e018c55625c5e9dc3f4dcdf182a2a5 = $(`<div id="html_75e018c55625c5e9dc3f4dcdf182a2a5" style="width: 100.0%; height: 100.0%;">     <div style="width:260px">          <img src="./images/troitskaja_ploshad\`(1).jpg"              width="100%"              style="              border-radius:12px;              margin-bottom:10px;">          <h3>Проклятие Кикиморы</h3>          <p>Древнее предание о загадочном существе и проклятии города.</p>          <p>         <b>Адрес:</b><br>         Троицкая площадь         </p>      </div>     </div>`)[0];
+                popup_6c4e174921e393097deb5e51a691aaea.setContent(html_75e018c55625c5e9dc3f4dcdf182a2a5);
+            
+        
+
+        marker_c42ed1336623c1783b66a760adab718e.bindPopup(popup_6c4e174921e393097deb5e51a691aaea)
+        ;
+
+        
+    
+    
+            marker_c42ed1336623c1783b66a760adab718e.bindTooltip(
+                `<div>
+                     Проклятие Кикиморы
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c42ed1336623c1783b66a760adab718e.setIcon(icon_1350895666dc2e935451d7ea20e860c2);
+            
+    
+            var marker_9ef69862eba9763f3c6b5ba21bade6e4 = L.marker(
+                [59.945162, 30.335707],
+                {
+}
+            ).addTo(feature_group_2f33f361923c92ad2de5579e6c2189db);
+        
+    
+            var icon_d0f5c811381500d115f4eda4e5812bc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4e36fdaaf47a1a8613464d44c97e948 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fb71964da8d38a4af6da6f4194a863e5 = $(`<div id="html_fb71964da8d38a4af6da6f4194a863e5" style="width: 100.0%; height: 100.0%;">     <div style="width:260px">          <img src="./images/letnij-sad.jpg"              width="100%"              style="              border-radius:12px;              margin-bottom:10px;">          <h3>Анна Иоанновна</h3>          <p>История о призрачном двойнике императрицы.</p>          <p>         <b>Адрес:</b><br>         Летний сад         </p>      </div>     </div>`)[0];
+                popup_d4e36fdaaf47a1a8613464d44c97e948.setContent(html_fb71964da8d38a4af6da6f4194a863e5);
+            
+        
+
+        marker_9ef69862eba9763f3c6b5ba21bade6e4.bindPopup(popup_d4e36fdaaf47a1a8613464d44c97e948)
+        ;
+
+        
+    
+    
+            marker_9ef69862eba9763f3c6b5ba21bade6e4.bindTooltip(
+                `<div>
+                     Анна Иоанновна
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ef69862eba9763f3c6b5ba21bade6e4.setIcon(icon_d0f5c811381500d115f4eda4e5812bc4);
+            
+    
+            feature_group_2f33f361923c92ad2de5579e6c2189db.addTo(map_5500642146b220b9472a3fe96f0596eb);
+        
+    
+            var layer_control_77301dbb945ba67ca5492ac96a108fa0_layers = {
+                base_layers : {
+                    "cartodbdarkmatter" : tile_layer_1e7233811531a07238b7c41a19abebed,
+                },
+                overlays :  {
+                    "\u041b\u0435\u0433\u0435\u043d\u0434\u044b" : feature_group_2f33f361923c92ad2de5579e6c2189db,
+                },
+            };
+            let layer_control_77301dbb945ba67ca5492ac96a108fa0 = L.control.layers(
+                layer_control_77301dbb945ba67ca5492ac96a108fa0_layers.base_layers,
+                layer_control_77301dbb945ba67ca5492ac96a108fa0_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_5500642146b220b9472a3fe96f0596eb);
+
+        
+</script>
+</html>
