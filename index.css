@@ -816,17 +816,17 @@ footer h3 {
 
 .team-card img {
 
-    width: 140px;
+    width: 120px;
 
-    height: 140px;
+    height: 120px;
 
     object-fit: cover;
 
-    border-radius: 50%;
+    border-radius: 15%;
 
     margin-bottom: 20px;
 
-    border: 3px solid #d4af37;
+    border: 2px solid #d4af37;
 }
 
 .team-card h3 {
@@ -970,11 +970,84 @@ footer h3 {
 
     border-left: 4px solid #d4af37;
 
-    background: rgba(212, 175, 55, 0.08);
+    background: #0f172a;
 
     border-radius: 12px;
 
     color: #f3f4f6;
 
     font-weight: 600;
+}
+
+/* ===== REVIEWS ===== */
+
+.reviews {
+
+    background: #111827;
+
+    text-align: center;
+}
+
+.reviews h2 {
+
+    margin-bottom: 50px;
+}
+
+.reviews-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+.review-card {
+
+    background: rgba(255, 255, 255, .04);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(8px);
+
+    transition: .3s;
+}
+
+.review-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #d4af37;
+}
+
+.review-card p {
+
+    color: #d1d5db;
+
+    line-height: 1.8;
+
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+.review-card span {
+
+    color: #d4af37;
+
+    font-weight: 600;
+}
+
+.reviews-subtitle {
+
+    color: #9ca3af;
+
+    margin-bottom: 40px;
+
+    font-size: 1rem;
 }
