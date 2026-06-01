@@ -88,20 +88,7 @@ const quizData = [
         ],
 
         correct: 0
-    },
-
-    {
-        question: "Какой мем связан с умным домофоном?",
-
-        answers: [
-            "Разборка питерская",
-            "Smile face",
-            "Котлетка с пюрешкой"
-        ],
-
-        correct: 1
     }
-
 ];
 
 let currentQuestion = 0;
