@@ -911,6 +911,15 @@ footer h3 {
 
     .team-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .last-card {
+        grid-column: auto;
+    }
+
+    .team-card {
+        padding: 25px;
     }
 
 }
