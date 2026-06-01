@@ -203,7 +203,7 @@ function showResult() {
 
     document.getElementById("result")
         .innerHTML = `
-Ваш результат: ${score}/5
+Ваш результат: ${score}/4
 <br><br>
 ${text}
 <br><br>
