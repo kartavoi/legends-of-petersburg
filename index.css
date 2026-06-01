@@ -923,3 +923,58 @@ footer h3 {
     }
 
 }
+
+/* ===== GOAL ===== */
+
+.project-goal {
+
+    background: #111827;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.goal-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.goal-content h2 {
+
+    color: #d4af37;
+
+    margin-bottom: 30px;
+
+    font-size: 2rem;
+}
+
+.goal-content p {
+
+    color: #d1d5db;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.goal-highlight {
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-left: 4px solid #d4af37;
+
+    background: rgba(212, 175, 55, 0.08);
+
+    border-radius: 12px;
+
+    color: #f3f4f6;
+
+    font-weight: 600;
+}
