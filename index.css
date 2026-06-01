@@ -20,8 +20,9 @@ body {
 /* ===== HERO ===== */
 
 .hero {
-    min-height: 100vh;
-    height: auto;
+
+    max-height: 100vh;
+    overflow: hidden;
 
     background:
         linear-gradient(rgba(0, 0, 0, .65),
