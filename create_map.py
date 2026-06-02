@@ -29,7 +29,7 @@ places = [
     "coords": [59.925755, 30.325768],
     "image": "./images/rotonda.jpg",
     "address": "Гороховая ул., 57",
-    "rating": "4.7 ⭐"
+    "rating": "4.7 ⭐",
     "desc": "Мистический портал Петербурга и место множества городских легенд."
 },
 
@@ -38,7 +38,7 @@ places = [
     "coords": [59.923276, 30.330856],
     "image": "images/rasputin.jpg",
     "address": "Гороховая ул., 64",
-    "rating": "4.9 ⭐"
+    "rating": "4.9 ⭐",
     "desc": "Легенда о духе Григория Распутина, который до сих пор не покидает свой дом."
 },
 
@@ -47,7 +47,7 @@ places = [
     "coords": [59.952699, 30.325958],
     "image": "./images/troitskaja_ploshad`(1).jpg",
     "address": "Троицкая площадь",
-    "rating": "4.5 ⭐"
+    "rating": "4.5 ⭐",
     "desc": "Древнее предание о загадочном существе и проклятии города."
 },
 
@@ -56,7 +56,7 @@ places = [
     "coords": [59.945162, 30.335707],
     "image": "./images/letnij-sad.jpg",
     "address": "Летний сад",
-    "rating": "4.6 ⭐"
+    "rating": "4.6 ⭐",
     "desc": "История о призрачном двойнике императрицы."
 }
 
@@ -110,6 +110,13 @@ for place in places:
              margin-bottom:10px;">
 
         <h3>{place['name']}</h3>
+
+        <p style="
+    color:#fbbf24;
+    font-size:15px;
+    font-weight:bold;">
+    {place['rating']}
+    </p>
 
         <p>{place['desc']}</p>
 
